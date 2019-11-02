@@ -4,6 +4,7 @@
   <head>
     <link rel="stylesheet" href="style.css">
 	<p>made by fakeman (fakemanoan) for funny use  FAST,  copyrights to respective owners</p>
+	<h5>click a button to play a sound </h5>
   </head>
 
   <body>
@@ -26,6 +27,7 @@
 	<button onclick="PlaySound('outofthegame.flac')"> out of the game</button>
 	<button onclick="PlaySound('yourenickedoldbeauty.flac')"> Ya nicked</button>
 	<button onclick="PlaySound('youknowyougottapayya.flac')">???</button>
+	
 	<br>
 	<H1>other garbage</H1>
 	<button onclick="PlaySound('spongebob backscratch.wav')">spongebob pleasure</button>
@@ -33,11 +35,19 @@
 	<button onclick="PlaySound('spongebob loud.mp3')">squidward SPONGEBOB</button>
 	<button onclick="PlaySound('chuckle1.flac')">fchucklebrother</button>
 	<button onclick="PlaySound('chuckle2.flac')">fchucklebrother 2</button>
+	<button onclick="PlaySound('Bob Saget2.mp3')">Danny BOBSAGET!</button>
+	<button onclick="PlaySound('KABOOM.mp3')">demoman kaboom</button>
+	<button onclick="PlaySound('publicrestroom.flac')">public restroom boom</button>
+	<button onclick="PlaySound('demomanfbomb.flac')">demoman fbomb</button>
+	<button onclick="PlaySound('merasmuscome.flac')">merasmus has come</button>
+	<button onclick="PlaySound('BITCONNECT.flac')">BITCONNECT 1</button>
+
 	<script>
     function PlaySound(name) {
          var audio = new Audio("sounds/" + name);
 		audio.play();
       }
+	  
     </script>
   </body>
 
