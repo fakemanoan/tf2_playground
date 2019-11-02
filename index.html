@@ -1,13 +1,42 @@
-<HTML>
-<body>
-<button onclick="PlaySound('BATT2-converted.flac')"> button1</button>
-</body>
-<script>
-    function PlaySound(melody) {
-        alert("On Press of "+melody);
-        var path = "\sounds\"
-        var snd = new Audio(path + melody);
-        snd.play();
-    }
-</script>
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <link rel="stylesheet" href="style.css">
+	<p>made by fakeman (fakemanoan) for funny use  FAST,  copyrights to respective owners</p>
+  </head>
+
+  <body>
+	<H1>HARRY BATT SOUNDBOARD (and other things)</H1>
+    <button onclick="PlaySound('great.FLAC')"> Great</button>
+	<button onclick="PlaySound('naebodymove1.FLAC')"> NAEBODYMOVE</button>
+	<button onclick="PlaySound('naebodymove2.FLAC')"> NAEBODYMOVE2</button>
+	<button onclick="PlaySound('BATT2.FLAC')"> Theme 1</button>
+	<button onclick="PlaySound('BATT.FLAC')"> Theme 2</button>
+	<button onclick="PlaySound('WHATAREYETALKINGBOUTMAN.FLAC')"> WHAT ARE YOU TALKING ABOUT MAN</button>
+    <button onclick="PlaySound('intro1.FLAC')"> Profile 1</button>
+	<button onclick="PlaySound('exhibita.FLAC')"> exhibit a</button>
+	<button onclick="PlaySound('dirttylittletike.FLAC')"> dirty little tike!</button>
+	<button onclick="PlaySound('outofthegame.FLAC')"> Out of the game</button>
+	<button onclick="PlaySound('hesalittleliar.FLAC')"> Liar</button>
+	<button onclick="PlaySound('naesonnotformecusimhard.FLAC')"> I'm HARD</button>
+	<button onclick="PlaySound('IMATRUMPINGCOPPER.FLAC')"> I'm a TRUMPING COPPER</button>
+	<button onclick="PlaySound('alittlefishy.FLAC')"> Little fishy</button>
+	<button onclick="PlaySound('amimakingthatclear.FLAC')"> Am I clear?</button>
+	<button onclick="PlaySound('outofthegame.FLAC')"> out of the game</button>
+	<button onclick="PlaySound('yourenickedoldbeauty.FLAC')"> Ya nicked</button>
+	<button onclick="PlaySound('youknowyougottapayya.FLAC')">???</button>
+	<br>
+	<H1>other garbage</H1>
+	<button onclick="PlaySound('spongebob backscratch.wav')">spongebob pleasure</button>
+	<button onclick="PlaySound('toilet.mp3')">squidward toilet</button>
+	<button onclick="PlaySound('spongebob loud.mp3')">squidward SPONGEBOB</button>
+	<script>
+    function PlaySound(name) {
+         var audio = new Audio("sounds/" + name);
+		audio.play();
+      }
+    </script>
+  </body>
+
 </html>

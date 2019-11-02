@@ -1,0 +1,31 @@
+body{
+background-image:url(harrybatt.jpg);
+background-repeat: no-repeat;
+background-size: cover;
+}
+h1{
+font-family:Impact;
+font-size:50px;
+color: #FFF;
+text-shadow: 3px 2px #000;
+}
+p{
+	color: #fff;
+	font-family: tahoma;
+}
+	
+button{
+	background-color: #4F44AA; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+button:hover {
+  background-color: #4CAF50; /* Green */
+  color: white;
+}
