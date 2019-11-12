@@ -7,46 +7,78 @@
 	<h5>click a button to play a sound </h5>
   </head>
 
-  <body>
+  <body onload="loadAllSounds()">
 	<H1>HARRY BATT SOUNDBOARD (and other things)</H1>
-    <button onclick="PlaySound('great.flac')"> Great</button>
-	<button onclick="PlaySound('naebodymove1.flac')"> NAEBODYMOVE</button>
-	<button onclick="PlaySound('naebodymove2.flac')"> NAEBODYMOVE2</button>
-	<button onclick="PlaySound('BATT2.flac')"> Theme 1</button>
-	<button onclick="PlaySound('BATT.flac')"> Theme 2</button>
-	<button onclick="PlaySound('WHATAREYETALKINGBOUTMAN.flac')"> WHAT ARE YOU TALKING ABOUT MAN</button>
-    <button onclick="PlaySound('intro1.flac')"> Profile 1</button>
-	<button onclick="PlaySound('exhibita.flac')"> exhibit a</button>
-	<button onclick="PlaySound('dirttylittletike.flac')"> dirty little tike!</button>
-	<button onclick="PlaySound('outofthegame.flac')"> Out of the game</button>
-	<button onclick="PlaySound('hesalittleliar.flac')"> Liar</button>
-	<button onclick="PlaySound('naesonnotformecusimhard.flac')"> I'm HARD</button>
-	<button onclick="PlaySound('IMATRUMPINGCOPPER.flac')"> I'm a TRUMPING COPPER</button>
-	<button onclick="PlaySound('alittlefishy.flac')"> Little fishy</button>
-	<button onclick="PlaySound('amimakingthatclear.flac')"> Am I clear?</button>
-	<button onclick="PlaySound('outofthegame.flac')"> out of the game</button>
-	<button onclick="PlaySound('yourenickedoldbeauty.flac')"> Ya nicked</button>
-	<button onclick="PlaySound('youknowyougottapayya.flac')">???</button>
-	
+	<div id="harrybatt"></div>
 	<br>
 	<H1>other garbage</H1>
-	<button onclick="PlaySound('spongebob backscratch.wav')">spongebob pleasure</button>
-	<button onclick="PlaySound('toilet.mp3')">squidward toilet</button>
-	<button onclick="PlaySound('Spongebob loud.mp3')">squidward SPONGEBOB</button>
-	<button onclick="PlaySound('chuckle1.flac')">fchucklebrother</button>
-	<button onclick="PlaySound('chuckle2.flac')">fchucklebrother 2</button>
-	<button onclick="PlaySound('Bob Saget2.mp3')">Danny BOBSAGET!</button>
-	<button onclick="PlaySound('KABOOM.mp3')">demoman kaboom</button>
-	<button onclick="PlaySound('publicrestroom.flac')">public restroom boom</button>
-	<button onclick="PlaySound('demomanfbomb.flac')">demoman fbomb</button>
-	<button onclick="PlaySound('merasmuscome.flac')">merasmus has come</button>
-	<button onclick="PlaySound('BITCONNECT.flac')">BITCONNECT 1</button>
+	<div id ="garb"></div>
+	
 
 	<script>
+	 var batt = [
+		  ['great.flac', "Great"] ,
+		  ['naebodymove1.flac', "NAEBODYMOVE"],
+		  ['naebodymove2.flac', "NAEBODYMOVE2"],
+		  ['BATT2.flac', "Theme 1"],
+		  ['BATT.flac', "Theme 2"],
+		  ['WHATAREYETALKINGBOUTMAN.flac', "WHAT ARE YOU TALKING BOUT MAN"],
+		  ['intro1.flac', "Profile 1"],
+		  ['exhibita.flac', "exhibit a"],
+		  ['dirttylittletike.flac', "dirty little tike!"],
+		  ['outofthegame.flac', "out of the game"],
+		  ['hesalittleliar.flac', "LIE R!"],
+		  ['naesonnotformecusimhard.flac', "IM HOARRRD"],
+		  ['IMATRUMPINGCOPPER.flac', "IM A TRUMPIN COPPER"],
+		  ['alittlefishy.flac', "Little Fishy"],
+		  ['amimakingthatclear.flac', "Clear?"],
+		  ['yourenickedoldbeauty.flac', "you're nicked"],
+		  ['youknowyougottapayya.flac', "???"],
+		  ['outofthegame.flac', "NAEBODYMOVE"]
+	  ];
+	   var garbo = [
+		  ['spongebob backscratch.wav', "spongebob pleasure"] ,
+		  ['spongebob work.flac', "Spongebob work rant"],
+		  ['spponegbob mf.flac', "Spongebob motherfbomb"],
+		  ['spomngebob fbomb.flac', "Spongebob FBOMB"],
+		  ['spongebob fbomb2.flac', "Spongebob FBOMB2"],
+		  ['spongebob p bomb.flac', "Spongebob pbomb"],
+		  ['toilet.mp3', "squidward toilet"],
+		  ['Spongebob loud.mp3', "squidward SPONGEBOB"],
+		  ['squidward fishpaste.flac', "squidward fishpaste"],
+		  ['planktonbs.flac', "Plankton BS"],
+		  ['plankton sbomb.flac', "Plankton S"],
+		  ['planktonchumbucket.flac', "Plankton chumbucket"],
+		  ['krabs.flac', "MR Krabs curse"],
+		  ['krabs fbomb.flac', "Krabs fbomb"],
+		  ['krabs pbomb.flac', "krabs pbomb"],
+		  ['krabs csucker.flac', "krabs weiner"],
+		  ['chuckle1.flac', "fchucklebrother"],
+		  ['chuckle2.flac', "fchucklebrother 2"],
+
+	  ];
     function PlaySound(name) {
          var audio = new Audio("sounds/" + name);
 		audio.play();
       }
+	  function loadAllSounds(){
+		var battd = document.getElementById('harrybatt');
+		for (i=0; i < batt.length; i++){
+			var lol = document.createElement('button');
+			lol.innerHTML = batt[i][1];
+			lol.setAttribute("onclick", "PlaySound('"+ batt[i][0] +"')");
+			battd.appendChild(lol);
+			battd.append(" ");
+		}
+		var garbage = document.getElementById('garb');
+		for (i=0; i < batt.length; i++){
+			var lol = document.createElement('button');
+			lol.innerHTML = garbo[i][1];
+			lol.setAttribute("onclick", "PlaySound('"+ garbo[i][0] +"')");
+			garbage.appendChild(lol);
+			garbage.append(" ");
+		}
+	  }
 	  
     </script>
   </body>
