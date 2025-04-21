@@ -1,0 +1,76 @@
+<head>
+    <style>
+        body{
+            background-image: linear-gradient(105deg, #303030, #585454);
+            color: #efefef;
+        }
+        h2, h3, p, a, ul, li{
+            font-family: sans-serif;
+            color: #efefef;
+        }
+        h1{
+            font-family: sans-serif;
+            background: linear-gradient(to right, #ef5350, #f3ef09, #25dd2f, #1aece2, #2647da, #4543a0, #f941ff, #ef5350);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 4px;
+        }
+        a{
+            color: dodgerblue;
+        }
+        div.line{
+            background: linear-gradient(to right, #ef5350, #f3ef09, #25dd2f, #1aece2, #2647da, #4543a0, #f941ff, #ef5350 100%);
+            width: 3000px;
+            height: 5px;
+            animation: rotate 3s infinite linear;
+            -webkit-animation: rotate 3s infinite linear;
+            margin-bottom: 4px;
+        }
+        @keyframes rotate {
+        from {
+        background-position: -3000px;
+        }
+        to {
+        background-position: 0px;
+        }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>TF2 coloured text chat</h1>
+    <div class="line"></div>
+    <div id="middle">
+        Enter your text: <input id="intext">
+        <br><br>
+        Output: <input id="outtext">
+    </div>
+
+   <div id="side">
+        <h2>How does this work?</h2>
+        <p>
+            Source uses a special unicode character for text chat colours. You can find this in the TF2 source code that was recently released. However due to a bug in the code, it does not properly strip the colour code magic symbols from user inputted text. This means we can use this in-game, no game modifications necesssary.
+            <br><br>
+            Any standard hexadecimal colour code is accepted (ie 0xFFFFFF).
+            <br><br>
+            I created this page because others do not follow limitations set in-game properly. Those limitations are:
+
+            <ul>
+                <li>
+                    You can't enter text longer than 127 characters (including the additions for colour)
+                </li>
+                <li>
+                    You can only do this with a prefix infront of your name (Like *DEAD*, (TEAM) or (Spectator))
+                </li>
+                <li>
+                    Due to botting, some text characters are stripped from messages, such as new lines, some special unicode characters, and some ASCII symbols.
+                </li>
+                <li>
+                    Some community servers have plugins which fixes this problem. Using it in these servers may get you banned.
+                </li>
+            </ul>
+        </p>
+   </div>
+   <script>
+    </script>
+</body>
