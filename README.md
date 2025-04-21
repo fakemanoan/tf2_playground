@@ -1,6 +1,10 @@
-# harrybattsoundboard
-This is a soundboard created by me for originally DC Harry Batt from Dick and Dom in da Bungalow, but has transformed into a repository full of memes. Click the button to play the sounds. Simple structure and made relatively quickly. 
+# Fakeman's TF2 playground
 
-https://fakemanoan.github.io/harrybattsoundboard/
+Direct link: https://fakemanoan.github.io/tf2_playground/  
 
-Note: I don't own any of the original recording material and they belong to their respective owners. This is just a bit of a meme.
+Dumping ground for some javascript based tools I have made. Some may or may not be of good quality. Actually they are probably all bad quality, but they are useful!
+
+Contains:
+- Soundboard (Harry Batt, Chuckle Brothers, Spongebob)
+
+  
