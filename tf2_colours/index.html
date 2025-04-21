@@ -28,10 +28,10 @@
         }
         @keyframes rotate {
         from {
-        background-position: -3000px;
+            background-position: -3000px;
         }
         to {
-        background-position: 0px;
+            background-position: 0px;
         }
         }
     </style>
@@ -41,9 +41,11 @@
     <h1>TF2 coloured text chat</h1>
     <div class="line"></div>
     <div id="middle">
-        Enter your text: <input id="intext">
+        Enter your text: <br>
+        <input id="intext" maxlength="127" size="90" onchange onpropertychange onkeyuponpaste oninput="updateText()">
         <br><br>
-        Output: <input id="outtext">
+        Output: <br>
+        <input id="outtext" maxlength="127" size="90" readonly>
     </div>
 
    <div id="side">
@@ -71,6 +73,30 @@
             </ul>
         </p>
    </div>
-   <script>
+    <script>
+        function sanitizeText(x){
+            //Remove all illegal characters from the input
+            var intext = document.getElementById("intext").value; 
+
+            var sanitized;
+
+            return sanitized;
+        }
+        function convertToColours(){
+            //Convert input text to colours
+            var intext = document.getElementById("intext").value; 
+
+            var coloured;
+
+            return coloured;
+        }
+        function updateText(){
+            var input = document.getElementById("intext").value; 
+
+            var output = input;
+
+            document.getElementById("outtext").value = output; 
+        }
+        
     </script>
 </body>
